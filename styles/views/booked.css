@@ -1,0 +1,28 @@
+.booked-main-container {
+    width: 100%;
+    height: 400px;
+    margin: auto ;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top:25px;
+    overflow: hidden;
+}
+
+.booked-main-container h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+
+}
+
+.booked-main-container img {
+    width: 100%;
+}
+
+.booked-main-container button {
+    width: 50%;
+    padding: 15px;
+    background: #4BACC1;
+    font-size: 18px;
+    color: #FFFFFF;
+}

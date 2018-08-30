@@ -1,0 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Arimo:400,700);
+
+h1,h2,h3,h4,h5,h6,button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p,a,li {
+    font-family: 'Arimo', sans-serif;
+}

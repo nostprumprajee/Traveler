@@ -1,0 +1,51 @@
+.about-main {
+    width: 100%;
+    display: flex;
+}
+
+.about-image {
+    width: 400px;
+    text-align: center;
+    padding-top: 26px;
+
+}
+
+.about-image img {
+    width: 90%;
+}
+
+
+.about-inner-right {
+    width: 60%;
+}
+
+.about-inner-intro {
+    padding-top: 25px;
+}
+
+.about-inner-intro h1 {
+    width: 50%;
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.about-inner-intro p {
+    width: 80%;
+    font-size: 1.1rem;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.about-inner-intro button {
+    width: 50%;
+    font-size: 1.1rem;
+    color: #FFF;
+    background: #12F0F0;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.about-inner-intro button:hover {
+    background: #ccc;
+}

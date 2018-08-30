@@ -1,0 +1,14 @@
+.contact-container {
+    padding-top: 35px;
+}
+
+.contact-container  h1 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+.contact-container  p {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    font-weight: 100;
+}
