@@ -1,4 +1,4 @@
-# DevMtn-Travels
+# Travel Developer
 
 ### Introduction
 
@@ -140,21 +140,21 @@ The contact.html and the about-adventurers.html are both sub routes to the home 
    $stateProvider
             .state('home',{
                 url:'/',
-                templateUrl: "../views/about.html"
+                templateUrl: "../views/index.html"
             })
             .state('adventurers',{
                 url:'/adventurers',
                 parent:'home',
-                templateUrl: "../views/about-adventurers.html"
+                templateUrl: "../views/generic.html"
             })
             .state('contact',{
                 url:'/contact',
                 parent:'home',
-                templateUrl: "../views/contact.html"
+                templateUrl: "../views/elements.html"
             })
             .state('packages',{
                 url:'/packages',
-                templateUrl: "../views/packages.html"
+                templateUrl: "../views/flight.html"
 
             })
             .state('booked',{
