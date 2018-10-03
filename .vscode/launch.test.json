@@ -1,0 +1,120 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "demo-mongodb",
+                "projectName": "demo-mongodb",
+                "workingDirectory": "c:\\Users\\IBM_ADMIN\\Downloads\\Travel\\demo-mongodb",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            },
+            {
+                "name": "demo",
+                "projectName": "demo",
+                "workingDirectory": "c:\\Users\\IBM_ADMIN\\Downloads\\Travel\\demo",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            },
+            {
+                "name": "Eureka-service",
+                "projectName": "Eureka-service",
+                "workingDirectory": "c:\\Users\\IBM_ADMIN\\Downloads\\Travel\\Eureka-service",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            },
+            {
+                "name": "Pricing-Service",
+                "projectName": "Pricing-Service",
+                "workingDirectory": "c:\\Users\\IBM_ADMIN\\Downloads\\Travel\\Pricing-Service",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            },
+            {
+                "name": "Product-Service",
+                "projectName": "Product-Service",
+                "workingDirectory": "c:\\Users\\IBM_ADMIN\\Downloads\\Travel\\Product-Service",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            },
+            {
+                "name": "Configuration-Service",
+                "projectName": "Configuration-Service",
+                "workingDirectory": "c:\\Users\\IBM_ADMIN\\Downloads\\Travel\\Configuration-Service",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "demo-mongodb",
+                "projectName": "demo-mongodb",
+                "workingDirectory": "c:\\Users\\IBM_ADMIN\\Downloads\\Travel\\demo-mongodb",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            },
+            {
+                "name": "demo",
+                "projectName": "demo",
+                "workingDirectory": "c:\\Users\\IBM_ADMIN\\Downloads\\Travel\\demo",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            },
+            {
+                "name": "Eureka-service",
+                "projectName": "Eureka-service",
+                "workingDirectory": "c:\\Users\\IBM_ADMIN\\Downloads\\Travel\\Eureka-service",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            },
+            {
+                "name": "Pricing-Service",
+                "projectName": "Pricing-Service",
+                "workingDirectory": "c:\\Users\\IBM_ADMIN\\Downloads\\Travel\\Pricing-Service",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            },
+            {
+                "name": "Product-Service",
+                "projectName": "Product-Service",
+                "workingDirectory": "c:\\Users\\IBM_ADMIN\\Downloads\\Travel\\Product-Service",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            },
+            {
+                "name": "Configuration-Service",
+                "projectName": "Configuration-Service",
+                "workingDirectory": "c:\\Users\\IBM_ADMIN\\Downloads\\Travel\\Configuration-Service",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
