@@ -1,3 +1,6 @@
+
+import com.example.demo.customer.Customer;
+
 @RestController
 @RequestMapping("/customers")
 public class CustomerController {

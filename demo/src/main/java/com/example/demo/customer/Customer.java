@@ -1,3 +1,17 @@
+package com.example.demo.customer;
+
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import static javax.swing.text.StyleConstants.Size;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import lombok.Data;
+import org.hibernate.annotations.Entity;
+
 @Data
 @Entity
 public class Customer {
