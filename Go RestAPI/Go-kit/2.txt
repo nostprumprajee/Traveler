@@ -1,0 +1,5 @@
+$curl  -X POST -d '{"value":2}' 'http://localhost:8080/add'
+{"value":2}
+
+$curl  -X POST -d '{"value":2}' 'http://localhost:8080/add'
+rate limit exceeded
