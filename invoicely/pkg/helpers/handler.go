@@ -1,4 +1,3 @@
-// pkg/helpers/handler.go
 package helpers
 
 import (

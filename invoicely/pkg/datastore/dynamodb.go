@@ -1,4 +1,3 @@
-// pkg/datastore/dynamodb.go
 package datastore
 
 import (

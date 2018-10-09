@@ -11,14 +11,20 @@ import (
 
 type fakeRepo struct{}
 
-func (repo fakeRepo) Store(*model.Client) error {
-	return nil
+func (repo *fakeRepo) Fetch(key string) (*model.Client, error) {
+	return &model.Client{
+		ID:          "abc123",
+		Name:        "test client",
+		Description: "Test client",
+		Rate:        40,
+	}, nil
 }
-func TestCanStoreClient(t *testing.T) {
+
+func TestCanFetchClient(t *testing.T) {
 	request := events.APIGatewayProxyRequest{
-		Body: `{ "name": "test client", "description": "some test", "rate": 40 }`,
+		PathParameters: map[string]string{"id": "123"},
 	}
-	h := &handler{fakeRepo{}}
+	h := &handler{&fakeRepo{}}
 	response, err := h.Handler(request)
 	assert.NoError(t, err)
 	assert.Equal(t, http.StatusCreated, response.StatusCode)

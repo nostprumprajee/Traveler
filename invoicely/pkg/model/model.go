@@ -1,4 +1,3 @@
-// pkg/model/model.go
 package model
 
 // Client model

@@ -1,4 +1,3 @@
-// pkg/model/repository.go
 package model
 
 import (
@@ -51,4 +50,3 @@ func (repository *ClientRepository) Fetch(key string) (*Client, error) {
 	}
 	return client, nil
 }
-
