@@ -1,0 +1,63 @@
+service: invoicely
+
+# Provider relates to your cloud provider here, so AWS, Google etc
+provider:
+  name: aws
+  runtime: go1.x
+  region: eu-west-1
+  environment:
+    REGION: "eu-west-1"
+    
+  # Sets access and permissions for these functions
+  # In this case, we're allowing our function to talk
+  # to a DynamoDB instance within the same region.
+  iamRoleStatements:
+  - Effect: Allow
+    Action:
+      - dynamodb:Query
+      - dynamodb:Scan
+      - dynamodb:GetItem
+      - dynamodb:PutItem
+      - dynamodb:UpdateItem
+      - dynamodb:DeleteItem
+    Resource: "arn:aws:dynamodb:eu-west-1:*:table/*"
+
+package:
+ exclude:
+   - ./**
+ include:
+   - ./bin/**
+
+functions:
+  create-client:
+    handler: bin/create-client
+    # Events in our case is http, which will create an API Gateway
+    # we pass in a few more options, such as allowing permissive CORS options
+    # the method type and the path. The path is the uri.
+    # There are many types of events you can use other than http, such as
+    # SNS, S3, Alexa, Kinesis, etc. Really cool!
+    events:
+      - http:
+          path: createClient
+          method: post
+          cors:
+            origins:
+            - '*'
+
+# These are Cloudformation resources, in our case, we're creating
+# a DynamoDB table with a key of `id`, which is just a string.
+resources:
+  Resources:
+    clientsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: Clients
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
