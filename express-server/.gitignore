@@ -1,0 +1,4 @@
+/node_modules
+yarm.lock
+yarn-error.log
+.DS_Store
