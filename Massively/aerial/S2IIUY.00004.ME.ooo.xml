@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ftc:FATCA_OECD xmlns:ftc="urn:oecd:ties:fatca:v2" xmlns:iso="urn:oecd:ties:isofatcatypes:v1" xmlns:sfa="urn:oecd:ties:stffatcatypes:v2" xmlns:stf="urn:oecd:ties:stf:v4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="urn:oecd:ties:fatca:v2 ../../fatca_schema_2dot0/FatcaXML_v2.0.xsd">
+<ftc:MessageSpec>
+<sfa:SendingCompanyIN>700000.00000.TA.764</sfa:SendingCompanyIN>
+<sfa:TransmittingCountry>TH</sfa:TransmittingCountry>
+<sfa:ReceivingCountry>US</sfa:ReceivingCountry>
+<sfa:MessageType>FATCA</sfa:MessageType>
+<sfa:MessageRefId>S2IIUY.00004.ME.ooogenNumber</sfa:MessageRefId>
+<sfa:ReportingPeriod>2018-10-16</sfa:ReportingPeriod>
+<sfa:Timestamp>2018-10-16 06:03:18</sfa:Timestamp>
+</ftc:MessageSpec>
+<ftc:FATCA>
+<ftc:ReportingFI>
+<sfa:ResCountryCode>TH</sfa:ResCountryCode>
+<sfa:TIN>S2IIUY.00004.ME.ooo</sfa:TIN>
+<sfa:Name>Siam Commercial Bank</sfa:Name>
+<sfa:Address>
+<sfa:CountryCode>TH</sfa:CountryCode>
+<sfa:AddressFree>No. 3565  Windmill Drive Colarado</sfa:AddressFree>
+</sfa:Address>
+<ftc:FilerCategory>FATCA602</ftc:FilerCategory>
+<ftc:DocSpec>
+<ftc:DocTypeIndic>FATCA1</ftc:DocTypeIndic>
+<ftc:DocRefId>S2IIUY.00004.ME.ooogenNumber</ftc:DocRefId>
+</ftc:DocSpec>
+</ftc:ReportingFI>
+<ftc:ReportingGroup>
+<ftc:AccountReport>
+<ftc:DocSpec>
+<ftc:DocTypeIndic>FATCA1</ftc:DocTypeIndic>
+<ftc:DocRefId>S2IIUY.00004.ME.ooogenNumber</ftc:DocRefId>
+</ftc:DocSpec>
+<ftc:AccountNumber>0032009818</ftc:AccountNumber>
+<ftc:AccountHolder>
+<ftc:Individual>
+<sfa:Name>
+<sfa:FirstName>SCOTT</sfa:FirstName>
+<sfa:MiddleName/>
+<sfa:LastName>COATS</sfa:LastName>
+</sfa:Name>
+<sfa:Address>
+<sfa:AddressFree>No. 3565  Windmill Drive Colarado</sfa:AddressFree>
+</sfa:Address>
+<sfa:BirthInfo>
+<sfa:BirthDate>1959-02-18</sfa:BirthDate>
+</sfa:BirthInfo>
+</ftc:Individual>
+</ftc:AccountHolder>
+<ftc:AccountBalance>107,317.84</ftc:AccountBalance>
+<ftc:Payment>
+<ftc:Type>FATCA502</ftc:Type>
+<ftc:PaymentAmnt>55,000.00</ftc:PaymentAmnt>
+</ftc:Payment>
+</ftc:AccountReport>
+</ftc:ReportingGroup>
+</ftc:FATCA>
+</ftc:FATCA_OECD>
