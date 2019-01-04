@@ -1,0 +1,11 @@
+{
+  "name": "jade-demo",
+    "version": "1.0.0",
+    "description": "Sample Website built with Express.js + Jade",
+    "dependencies": {
+        "express": "^4.10.6",
+        "jade": "^1.8.2"
+  },
+  "author": "Nost",
+  "license": "ISC"
+}
