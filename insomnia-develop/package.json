@@ -1,0 +1,33 @@
+{
+  "name": "insomnia",
+  "private": true,
+  "version": "1.0.0",
+  "author": "Gregory Schier <gschier1990@gmail.com>",
+  "repository": "https://github.com/getinsomnia/insomnia",
+  "bugs": {
+    "url": "https://github.com/getinsomnia/insomnia"
+  },
+  "scripts": {
+    "bootstrap": "npm install && lerna bootstrap && lerna run bootstrap",
+    "publish": "lerna publish",
+    "clean": "lerna clean --yes && rimraf node_modules",
+    "test": "lerna run test --stream",
+    "app-start": "lerna run start --stream --scope=insomnia-app",
+    "app-build": "lerna run build --stream --scope=insomnia-app",
+    "app-package": "lerna run package --stream --scope=insomnia-app",
+    "format-code": "prettier --write \"**/*.js\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "devDependencies": {
+    "husky": "^1.0.0-rc.9",
+    "jest": "^23.6.0",
+    "lerna": "^3.4.3",
+    "prettier": "^1.13.6",
+    "pretty-quick": "^1.6.0",
+    "rimraf": "^2.6.2"
+  }
+}

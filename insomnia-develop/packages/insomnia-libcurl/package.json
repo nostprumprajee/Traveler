@@ -1,0 +1,14 @@
+{
+  "name": "insomnia-libcurl",
+  "version": "0.0.24",
+  "author": "Gregory Schier <gschier1990@gmail.com>",
+  "description": "Insomnia libcurl wrapper",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --version"
+  },
+  "dependencies": {
+    "insomnia-node-libcurl": "^2.0.0-alpha.0-1"
+  }
+}
