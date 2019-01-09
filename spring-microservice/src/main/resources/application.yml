@@ -1,0 +1,19 @@
+server:
+  port: 8000
+  servlet:
+    contextPath: /api
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_webservice
+    username: webservices
+    password: P@ssw0rd
+
+  security:
+    user:
+      name: john
+      password: P@ssw0rd
