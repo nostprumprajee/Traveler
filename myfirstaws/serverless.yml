@@ -1,0 +1,18 @@
+service: my-service
+
+app: myapp-dev
+tenant: nostprumprajee
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  Profile: user2
+  stage: dev
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: /hello
+          method: get
