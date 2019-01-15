@@ -22,8 +22,17 @@
 		   #map {
 			 height: 400px;  /* The height is 400 pixels */
 			 width: 100%;  /* The width is the width of the web page */
+			 
 			}
-
+			.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(images/loader-128x/Preloader_3.gif) center no-repeat #fff;
+}
 			* {
   box-sizing: border-box;
 }
@@ -87,10 +96,19 @@ input[type=submit] {
 }
 			
 		 </style>
-	 
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+	 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+	 <script>
+		 //paste this code under head tag or in a seperate js file.
+		 // Wait for window load
+		 $(window).load(function() {
+			 // Animate loader off screen
+			 $(".se-pre-con").fadeOut("slow");;
+		 });
+	 </script>
 	</head>
 	<body class="is-preload">
-		
+		<div class="se-pre-con"></div>
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
 				<!-- <header id="header" class="alt">
@@ -175,7 +193,7 @@ input[type=submit] {
 							<section class="posts">
 								<article>
 									<header>
-										<span class="date">April 24, 2017</span>
+										<span class="date">April 24, 2018</span>
 										<h2><a href="#">FUJI<br />
 										at Kawafujiko</a></h2>
 									</header>
@@ -187,7 +205,7 @@ input[type=submit] {
 								</article>
 								<article>
 									<header>
-										<span class="date">April 22, 2017</span>
+										<span class="date">April 22, 2018</span>
 										<h2><a href="#">SNOWDOLL<br />
 										at Somewhere</a></h2>
 									</header>
@@ -199,7 +217,7 @@ input[type=submit] {
 								</article>
 								<article>
 									<header>
-										<span class="date">April 18, 2017</span>
+										<span class="date">April 18, 2018</span>
 										<h2><a href="#">TEMPLE<br />
 										interdum dolor</a></h2>
 									</header>
@@ -211,7 +229,7 @@ input[type=submit] {
 								</article>
 								<article>
 									<header>
-										<span class="date">April 14, 2017</span>
+										<span class="date">April 14, 2018</span>
 										<h2><a href="#">Tempus sed<br />
 										nulla imperdiet</a></h2>
 									</header>
@@ -223,7 +241,7 @@ input[type=submit] {
 								</article>
 								<article>
 									<header>
-										<span class="date">April 11, 2017</span>
+										<span class="date">April 11, 2018</span>
 										<h2><a href="#">Odio magna<br />
 										sed consectetur</a></h2>
 									</header>
@@ -235,7 +253,7 @@ input[type=submit] {
 								</article>
 								<article>
 									<header>
-										<span class="date">April 7, 2017</span>
+										<span class="date">April 7, 2018</span>
 										<h2><a href="#">Augue lorem<br />
 										primis vestibulum</a></h2>
 									</header>

@@ -17,10 +17,29 @@
 			 height: 400px;  /* The height is 400 pixels */
 			 width: 100%;  /* The width is the width of the web page */
 			}
+			.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(images/loader-128x/Preloader_3.gif) center no-repeat #fff;
+}
 		 </style>
+		  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+		  <script>
+			  //paste this code under head tag or in a seperate js file.
+			  // Wait for window load
+			  $(window).load(function() {
+				  // Animate loader off screen
+				  $(".se-pre-con").fadeOut("slow");;
+			  });
+		  </script>
 	</head>
 	<body class="is-preload">
-
+		<div class="se-pre-con"></div>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -36,7 +55,7 @@
 							<li class="active"><a href="generic.html">Generic Page</a></li>
 							<li><a href="elements.html">Elements Reference</a></li>
 							<li><a href="flight.html">Search Flight</a></li>
-							<li><a href="login.html">Log in</a></li>
+							<li><a href="slogin.html">Log in</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.twiter.com" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
