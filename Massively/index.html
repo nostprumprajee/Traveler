@@ -16,7 +16,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="icon" type="image/png" href="images/unnamed.png" />
 		<style>
-
+			
 			
 			/* Set the size of the div element that contains the map */
 
@@ -95,20 +95,178 @@ input[type=submit] {
   background-color: DodgerBlue !important; 
   color: #ffffff; 
 }
-			
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 30%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 2% auto 12% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
 		 </style>
 	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 	 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 	 <script>
 		 //paste this code under head tag or in a seperate js file.
 		 // Wait for window load
+		 var modal = document.getElementById('id01');
+		
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
 		 $(window).load(function() {
 			 // Animate loader off screen
 			 $(".se-pre-con").fadeOut("slow");;
 		 });
 	 </script>
+	 
 	</head>
 	<body class="is-preload">
+			<div id="id01" class="modal">
+  
+					<form class="modal-content animate" action="/action_page.php">
+					  <div class="imgcontainer">
+						<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+						<img src="/images/img_avatar2.png" alt="Avatar" class="avatar">
+					  </div>
+				  
+					  <div class="container">
+						<label for="uname"><b>Username</b></label>
+						<input type="text" placeholder="Enter Username" name="uname" required>
+				  
+						<label for="psw"><b>Password</b></label>
+						<input type="password" placeholder="Enter Password" name="psw" required>
+						  
+						<button type="submit">Login</button>
+						<label>
+						  <input type="checkbox" checked="checked" name="remember"> Remember me
+						</label>
+					  </div>
+				  
+					  <div class="container" style="background-color:#f1f1f1">
+						<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+						<span class="psw">Forgot <a href="#">password?</a></span>
+					  </div>
+					</form>
+				  </div>
 		<div class="se-pre-con"></div>
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
@@ -143,6 +301,7 @@ input[type=submit] {
 					<div id="intro">
 						<h1>WE ARE<br />
 						TRAVEL DEVELOPER</h1>
+						
 						<p>Website for who love code and travel by <a href="https://twitter.com/NostPrumpraJee">NOST</a> for <a href="https://html5up.net">Travel</a><br />
 						and released for free under the <a href="#">Creative Commons license</a>.</p>
 						<ul class="actions">
@@ -162,7 +321,7 @@ input[type=submit] {
 							<li><a href="generic.html">Generic Page</a></li>
 							<li><a href="elements.html">Elements Reference</a></li>
 							<li><a href="flight.html">Search Flight</a></li>
-							<li><a href="slogin.html">Log in</a></li>
+							<li><a href="login.html">Log in</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.twitter.com" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -197,7 +356,7 @@ input[type=submit] {
 									<header>
 										<span class="date">April 24, 2018</span>
 										<h2><a href="#">FUJI<br />
-										at Kawafujiko</a></h2>
+										at Kawaguchiko</a></h2>
 									</header>
 									<a href="#" class="image fit"><img src="images/IMG_1695.jpg" alt="" /></a>
 									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
@@ -209,7 +368,7 @@ input[type=submit] {
 									<header>
 										<span class="date">April 22, 2018</span>
 										<h2><a href="#">SNOWDOLL<br />
-										at Somewhere</a></h2>
+										at Chureito Pagoda</a></h2>
 									</header>
 									<a href="#" class="image fit"><img src="images/IMG_1500.jpg" alt="" /></a>
 									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
@@ -221,7 +380,7 @@ input[type=submit] {
 									<header>
 										<span class="date">April 18, 2018</span>
 										<h2><a href="#">TEMPLE<br />
-										interdum dolor</a></h2>
+										at Nikko</a></h2>
 									</header>
 									<a href="#" class="image fit"><img src="images/IMG_1324.jpg" alt="" /></a>
 									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
@@ -270,7 +429,7 @@ input[type=submit] {
 						<!-- Footer -->
 							<footer>
 								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
+									<a href="#" class="previous">Prev</a>
 									<a href="#" class="page active">1</a>
 									<a href="#" class="page">2</a>
 									<a href="#" class="page">3</a>
@@ -304,7 +463,7 @@ input[type=submit] {
 								</div>
 								<ul class="actions">
 									<li><input type="submit" value="Send Message" /></li>
-									<a href="index (2).html">Loader</a>
+									<!-- <a fhref="index (2).html">Loader</a> -->
 								</ul>
 							</form>
 						</section>
@@ -316,7 +475,9 @@ input[type=submit] {
 									  <input id="myInput" type="text" name="myCountry" placeholder="Country">
 									</div>
 									<input type="submit">
+									
 								  </form>
+								  
 								  <script>
 									function autocomplete(inp, arr) {
 									  /*the autocomplete function takes two arguments,
@@ -421,6 +582,7 @@ input[type=submit] {
 									/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 									autocomplete(document.getElementById("myInput"), countries);
 									</script>
+									
 							</section>
 							<section>
 								<h3>Phone</h3>

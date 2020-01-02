@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Search Flight - TRAVEL DEVELOPER by NOST</title>
@@ -6,7 +6,39 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+		<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css"> -->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+  <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+  <!-- <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+  
+  <script>
+		$(document).ready(function() {
+		  $( "#datepicker" ).datepicker();
+		  $( "#datepicker2" ).datepicker();
+		} );
+		var settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://cometari-airportsfinder-v1.p.rapidapi.com/api/airports/by-text?text="+$( "#origin" ).val(),
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "cometari-airportsfinder-v1.p.rapidapi.com",
+		"x-rapidapi-key": "93be61accemsh1c6e7979e10e3c7p1ad963jsn20338522fb9d"
+	}
+}
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});
+		</script>
 		<style>
 			/* Set the size of the div element that contains the map */
 		   #map {
@@ -64,7 +96,7 @@
                                     <div class="row gtr-uniform">
                                         <div class="col-6 col-12-xsmall">
 												<select>
-														<!-- <input type="text" name="demo-name" id="demo-name" value="" placeholder="Origin" /> -->
+														<!-- <input type="text"  id="origin"  placeholder="Origin" /> -->
 														<option value="org">Origin</option>
 														<option value="bkk">BKK-Bangkok</option>
 														<option value="nrt">NRT-Tokyo</option>
@@ -84,10 +116,10 @@
 												  </select> 
                                         </div>
                                         <div class="col-6 col-12-xsmall">
-                                            <input type="text" name="demo-name" id="demo-name" value="" placeholder="Departure Date" />
+                                            <input type="text"  id="datepicker" placeholder="Departure Date" />
                                         </div>
                                         <div class="col-6 col-12-xsmall">
-                                            <input type="text" name="demo-name" id="demo-name" value="" placeholder="Return Date" />
+                                            <input type="text"  id="datepicker2"  placeholder="Return Date" />
                                         </div>
                                         <div class="col-6 col-12-xsmall">
 											<!-- <input type="text" name="demo-name" id="demo-name" value="" placeholder="Passenger" /> -->
@@ -187,6 +219,10 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 			<script>
 				// Initialize and add the map
 				function initMap() {
