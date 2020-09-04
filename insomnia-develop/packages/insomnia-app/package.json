@@ -145,7 +145,7 @@
     "node-forge": "^0.7.5",
     "nunjucks": "^3.0.0",
     "oauth-1.0a": "^2.2.2",
-    "papaparse": "^4.3.6",
+    "papaparse": "^5.2.0",
     "pdfjs-dist": "^2.0.489",
     "prop-types": "^15.6.1",
     "react": "^16.5.2",
