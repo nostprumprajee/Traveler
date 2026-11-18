@@ -178,7 +178,7 @@
     "babel-preset-react": "^6.23.0",
     "concurrently": "^3.5.0",
     "cross-env": "^2.0.0",
-    "css-loader": "^0.28.11",
+    "css-loader": "^7.1.5",
     "electron": "^42.11.16",
     "electron-builder": "^20.20.4",
     "electron-builder-lib": "^20.20.4",
